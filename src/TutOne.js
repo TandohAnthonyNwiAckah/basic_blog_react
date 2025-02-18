@@ -6,7 +6,7 @@ function TutOne() {
 
   return (
     <div className="tut">
-      {/* CONVERTING ALL TO STRING */}
+      {/* REACT CONVERT ALL TO STRING */}
       <h1>{title}</h1>
       <p> Ranked {rank} out of 10</p>
       {/* <p>{person}</p> */}
