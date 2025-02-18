@@ -1,26 +1,25 @@
 import { useState } from "react";
 
 const Home = () => {
-  // let user = "Tanacom";
-
-  //  Making it reactive using useState Hook
-  const [name, setName] = useState("Tanacom");
-
-  const handleClick = () => {
-    // user = "Tony";
-    // console.log(user);
-    // console.log(user, e);
-
-    setName("Tony");
-  };
+  const [blogs, setBlogs] = useState([
+    { title: "My new website", body: "lorem ipsum...", author: "mario", id: 1 },
+    { title: "Welcome party!", body: "lorem ipsum...", author: "yoshi", id: 2 },
+    {
+      title: "Web dev top tips",
+      body: "lorem ipsum...",
+      author: "mario",
+      id: 3,
+    },
+  ]);
 
   return (
     <div className="home">
-      <h2>Homepage</h2>
-
-      <p>Username is : {name}</p>
-
-      <button onClick={handleClick}>Change Username </button>
+      {blogs.map((blog) => (
+        <div className="blog-preview" key={blog.id}>
+          <h2>{blog.title}</h2>
+          <p>Written by {blog.author}</p>
+        </div>
+      ))}
     </div>
   );
 };
