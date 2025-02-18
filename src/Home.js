@@ -1,28 +1,26 @@
+import { useState } from "react";
+
 const Home = () => {
-  // HANDLING CLICK EVENTS
+  // let user = "Tanacom";
 
-  const handleClick = (e) => {
-    console.log("hello, ninjas", e);
-  };
+  //  Making it reactive using useState Hook
+  const [name, setName] = useState("Tanacom");
 
-  const handleClickAgain = (name, e) => {
-    console.log("hello " + name, e.target);
+  const handleClick = () => {
+    // user = "Tony";
+    // console.log(user);
+    // console.log(user, e);
+
+    setName("Tony");
   };
 
   return (
     <div className="home">
       <h2>Homepage</h2>
 
-      <button onClick={handleClick}>CLICK ME</button>
+      <p>Username is : {name}</p>
 
-      {/* PASSING ARGUMENTS TO EVENT HANDLERS */}
-      <button
-        onClick={(e) => {
-          handleClickAgain("mario", e);
-        }}
-      >
-        CLICK ME AGAIN
-      </button>
+      <button onClick={handleClick}>Change Username </button>
     </div>
   );
 };
