@@ -1,4 +1,4 @@
-const BlogList = ({ blogs, title, hideBlog }) => {
+const BlogList = ({ blogs, title }) => {
   //   const blogs = props.blogs;
   //   const title = props.title;
 
@@ -9,7 +9,7 @@ const BlogList = ({ blogs, title, hideBlog }) => {
         <div className="blog-preview" key={blog.id}>
           <h2>{blog.title}</h2>
           <p>Written by {blog.author}</p>
-          <button onClick={() => hideBlog(blog.id)}>Hide blog</button>
+          {/* <button onClick={() => hideBlog(blog.id)}>Hide blog</button> */}
         </div>
       ))}
     </div>
