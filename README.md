@@ -2,6 +2,12 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+
+> ⚠ **Note:** Create React App (CRA) is officially deprecated. However, this repository is intended for **learning purposes**, so we are continuing to use CRA for educational exploration.  
+> Read more about it [here](https://create-react-app.dev/docs/getting-started/).  
+
+
+
 ## Available Scripts
 
 In the project directory, you can run:
